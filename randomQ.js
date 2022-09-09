@@ -4,16 +4,28 @@ const randomString = ["yes", "No",
 "Don't know. Don't care"];
 // logic for Ask a question and get answer input
 
+    
 
 function randomAnswer (){  
-    let Q = document.getElementById('askQs').value 
+    let item = randomString[Math.floor(Math.random() * randomString.length)];
+    let Question = document.getElementById('askQs').value;
 
-    if(Q){
-        Qa = document.getElementById('askQs').value= randomString [ Math.floor(Math.random()*randomString.length)];
-        
+    if (Question){
+      let Answer = document.getElementById('askQs').value = item;
+        if(Answer){
+            setTimeout(clearText, 3000)
+
+        }
+
     }
 
 }
+
+function clearText (){
+
+    document.getElementById('askQs').value= ' '
+}
+
 
 
 
